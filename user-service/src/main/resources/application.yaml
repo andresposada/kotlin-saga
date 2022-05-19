@@ -1,0 +1,23 @@
+
+server:
+  port: 8084
+
+axon:
+  serializer:
+    events: jackson
+
+spring:
+  datasource:
+    url: jdbc:h2:file:~/data/user-db
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: pass
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+  h2:
+    console:
+      enabled: true
+      settings:
+        web-allow-others: true
